@@ -1,0 +1,33 @@
+#oc_testing {
+	bottom: 0;
+	color: #ffc926;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	font-weight: bold;
+	z-index: 100;
+
+	button {
+		border-radius: 10px;
+		bottom: 5px;
+		height: 20px;
+		padding: 0;
+		position: absolute;
+		text-align: center;
+		width: 20px;
+		right: 5px;
+	}
+
+	span.link {
+		color: #eee;
+	}
+}
+
+#oc_testing.closed {
+	background-color: transparent;
+}
+
+#oc_testing.open {
+	background-color: #00000090;
+	left: 0;
+}
