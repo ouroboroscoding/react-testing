@@ -17,9 +17,13 @@ import React, { useState } from 'react';
 
 // Types
 export type TestingProps = {
-	locale: string,
-	location: string,
-	version: string
+	additional?: [ {
+		label: string,
+		value: string
+	} ],
+	locale?: string,
+	location?: string,
+	version?: string,
 }
 
 /**
@@ -31,7 +35,7 @@ export type TestingProps = {
  * @returns React.Component
  */
 export default function Testing({
-	locale, location, version
+	additional, locale, location, version
 }: TestingProps) {
 
 	// State
@@ -61,6 +65,9 @@ export default function Testing({
 			{locale && <p>Locale: {locale}</p>}
 			<p>Size: {size}</p>
 			<p>Width: {width}</p>
+			{additional && additional.map(o =>
+				<p>{o.label}: {o.value}</p>
+			)}
 		</div>
 	)
 }
