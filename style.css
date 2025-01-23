@@ -2,7 +2,7 @@
 	bottom: 0;
 	color: #ffc926;
 	padding: 10px;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	font-weight: bold;
 	z-index: 100;
