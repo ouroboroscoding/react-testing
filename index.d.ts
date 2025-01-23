@@ -10,9 +10,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 export type TestingProps = {
-    locale: string;
-    location: string;
-    version: string;
+    additional?: [
+        {
+            label: string;
+            value: string;
+        }
+    ];
+    locale?: string;
+    location?: string;
+    version?: string;
 };
 /**
  * Testing
@@ -22,7 +28,7 @@ export type TestingProps = {
  * @param Object props Properties passed to the component
  * @returns React.Component
  */
-declare function Testing({ locale, location, version }: TestingProps): React.JSX.Element;
+declare function Testing({ additional, locale, location, version }: TestingProps): React.JSX.Element;
 declare namespace Testing {
     var propTypes: {
         locale: PropTypes.Requireable<string>;

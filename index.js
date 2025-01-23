@@ -20,7 +20,7 @@ import React, { useState } from 'react';
  * @param Object props Properties passed to the component
  * @returns React.Component
  */
-export default function Testing({ locale, location, version }) {
+export default function Testing({ additional, locale, location, version }) {
     // State
     const [open, openSet] = useState(false);
     // Hooks
@@ -49,7 +49,11 @@ export default function Testing({ locale, location, version }) {
             size),
         React.createElement("p", null,
             "Width: ",
-            width)));
+            width),
+        additional && additional.map(o => React.createElement("p", null,
+            o.label,
+            ": ",
+            o.value))));
 }
 // Valid props
 Testing.propTypes = {
